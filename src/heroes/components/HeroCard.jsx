@@ -14,7 +14,7 @@ const CharactersByHero = ({alter_ego, characters}) => {
 
 export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance, characters }) => {
 
-    const heroUrl = `../assets/heroes/${id}.jpg`;
+    const heroUrl = `/heroes/${id}.jpg`;
     //const charactersByHeroe = (<p className="card-text">{characters}</p>)
 
     return (
