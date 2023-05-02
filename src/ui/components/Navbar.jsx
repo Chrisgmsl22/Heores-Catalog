@@ -1,9 +1,12 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { SearchPage } from '../../heroes/pages/SearchPage';
+import { useContext } from 'react';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 
 export const Navbar = (props) => {
 
+    const {user} = useContext(AuthContext);
     const navigate = useNavigate(); //Este customHook nos permite navegar entre rutas
     const handleLogout = () => {
         navigate('/login', { replace: true });
@@ -48,7 +51,7 @@ export const Navbar = (props) => {
                 <ul className="navbar-nav ml-auto">
                     
                     <span className='nav-item nav-link text-info'>
-                        Christian
+                        {user}
                     </span>
                     <button 
                         className="nav-item nav-link btn"
