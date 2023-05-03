@@ -6,9 +6,10 @@ import { AuthContext } from '../../auth/context/AuthContext';
 
 export const Navbar = (props) => {
 
-    const {user} = useContext(AuthContext);
+    const {user, logout} = useContext(AuthContext);
     const navigate = useNavigate(); //Este customHook nos permite navegar entre rutas
     const handleLogout = () => {
+        logout();
         navigate('/login', { replace: true });
     }
 
