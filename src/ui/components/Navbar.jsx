@@ -52,7 +52,7 @@ export const Navbar = (props) => {
                 <ul className="navbar-nav ml-auto">
                     
                     <span className='nav-item nav-link text-info'>
-                        {user}
+                        {user}CH
                     </span>
                     <button 
                         className="nav-item nav-link btn"

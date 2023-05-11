@@ -7,3 +7,13 @@ export const PublicRoute = ({children}) => {
    const {logged} = useContext(AuthContext); 
   return ((logged) ? <Navigate to='/' replace /> : children )
 }
+
+
+export const PublicRoute2 = ({children, ...props}) => {
+  const {logged} = useContext(AuthContext);
+  if (logged) {
+    props.router.navigate('/', {replace: true});
+    return null;
+  }
+  return children;
+}

@@ -40,7 +40,7 @@ export const SearchPage = () => {
           <h4>Searching</h4>
           <hr />
 
-          <form onSubmit={handleSearchSubmit}>
+          <form onSubmit={handleSearchSubmit} aria-label='form'>
             <input
               type="text"
               placeholder="Find your hero"
@@ -79,6 +79,7 @@ export const SearchPage = () => {
           <div 
             className="alert alert-danger animate__animated animate__fadeIn"
             style={{display: (showError) ? 'block' : 'none'}}
+            aria-label='error'
           >
             There's no response on <b>{q}</b>
           </div>
